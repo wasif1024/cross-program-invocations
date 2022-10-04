@@ -3,7 +3,7 @@ seeds = false
 skip-lint = false
 [programs.devnet]
 child = "6e7jVdErYvZ69uPX6b3asURAmAxvgwHC1woNwnVy2fmx"
-master="Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+master = "9SfdzDgtgwcazgzhQcZSbr1mVgWZuGcP5X5GVRfM2ydM"
 
 [registry]
 url = "https://api.apr.dev"

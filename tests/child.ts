@@ -17,11 +17,11 @@ describe("child", () => {
 
 
   const childKeypair = Keypair.generate()
-
+  const authorityKeypair = Keypair.generate()
 
   it('Does CPI!', async () => {
     await childProgram.methods
-      .initialize()
+      .initialize(authorityKeypair.publicKey)
       .accounts({
         child: childKeypair.publicKey,
         user: provider.wallet.publicKey,
@@ -34,8 +34,9 @@ describe("child", () => {
       .pullStrings(new anchor.BN(42))
       .accounts({
         childProgram: childProgram.programId,
-        data: childKeypair.publicKey,
-      })
+        child: childKeypair.publicKey,
+        authority: authorityKeypair.publicKey
+      }).signers([authorityKeypair])
       .rpc()
 
 
