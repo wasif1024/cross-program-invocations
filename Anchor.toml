@@ -1,16 +1,19 @@
+[toolchain]
+
 [features]
-seeds = false
+resolution = true
 skip-lint = false
+
 [programs.devnet]
-child = "6e7jVdErYvZ69uPX6b3asURAmAxvgwHC1woNwnVy2fmx"
-master = "9SfdzDgtgwcazgzhQcZSbr1mVgWZuGcP5X5GVRfM2ydM"
+child = "DMAgXZKGf4uM2rXex25YeLQbzMmZjR9hRKHdNvmdZtGf"
+master = "DpvoTtkJ9xTbaSDZf6G9B2W1zGDKiDtoVuPEbYgzQ4TC"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
 cluster = "devnet"
-wallet = "/Users/air/.config/solana/devnet.json"
+wallet = "~/.config/solana/devnet.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
